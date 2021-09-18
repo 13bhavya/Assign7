@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>Educational registration form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" th:href="@{/style.css}">
+
+</head>
+<body>
+<div class="main-block">
+    <div class="left-part">
+        <i class="fas fa-graduation-cap"></i>
+        <h1>Register to our courses</h1>
+        <p>WEBCX provides free learning materials for programming languages like HTML, CSS, Java Script, PHP etc.</p>
+<!--        <div class="btn-group">-->
+<!--&lt;!&ndash;            <a class="btn-item" href="https://www.w3docs.com/learn-html.html">Learn HTML</a>&ndash;&gt;-->
+<!--            <a class="btn-item" href="submit.html">Show Data</a>-->
+<!--        </div>-->
+    </div>
+    <form th:action="@{/submit}" th:object="${inquiry}" method="POST">
+        <div class="title">
+            <i class="fas fa-pencil-alt"></i>
+            <h2>Register here</h2>
+        </div>
+        <div class="info">
+            <input class="fname" type="text" th:field="*{searchName}" name="name" id="name" placeholder="Full name">
+            <input type="text" th:field="*{searchEmail}" name="email" id="email" placeholder="Email">
+            <input type="text" th:field="*{searchNum}" name="num" id="num" placeholder="Phone number">
+            <input type="password" th:field="*{searchPass}" name="password" id="password" placeholder="Password">
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" name="checkbox"><span>I give the permission</a></span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

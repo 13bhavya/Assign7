@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit page</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<!--    <script type="text/javascript" src="jav.js"/>-->
+</head>
+<body>
+<div th:each="form: ${forms}">
+    <h2>Data</h2>
+    <h3>
+        Name : <span th:text="${form.name}"></span>
+    </h3>
+    <h3>
+        Email Address : <span th:text="${form.email}"></span>
+    </h3>
+    <h3>
+        Phone number : <span th:text="${form.phone}"></span>
+    </h3>
+    <h3>
+        Password : <span th:text="${form.pass}"></span>
+    </h3>
+
+</div>
+</body>
+</html>
